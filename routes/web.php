@@ -11,5 +11,6 @@
 |
 */
 Route::resource('buku', 'FiidController');
-Route::get('/', 'FiidController@home');
+Route::get('/', 'FiidController@index');
 Route::post('/buku/create','FiidController@store');
+Route::get('/view/{id}', 'FiidController@view');

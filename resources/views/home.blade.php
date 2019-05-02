@@ -29,7 +29,8 @@
                             <td>
                                 <div class="d-flex justify-content-center">
                                     <!-- <div class="col-2"> -->
-                                        <a href="{{ route('buku.edit',$b->id)}}" class="btn btn-outline-info">UPDATE</a>
+                                        <a href="{{ url("/view/{$b->id}")}}" class="btn btn-outline-info">View</a>
+                                        <a href="{{ route('buku.edit',$b->id)}}" class="btn btn-outline-info">Update</a>
                                     <!-- </div> -->
                                     <!-- <div class="col-2"> -->
                                         <form action="{{ route('buku.destroy', $b->id)}}" method="post">

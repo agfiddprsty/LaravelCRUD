@@ -7,7 +7,7 @@ use App\Buku;
 
 class FiidController extends Controller
 {
-    public function home(){
+    public function index(){
         $buku = Buku::all();
         return view('home', ['buku' => $buku]);
     }
@@ -35,9 +35,10 @@ class FiidController extends Controller
           return redirect('/')->with('success', 'Book has been added'); 
     }
 
-    public function show($id)
+    public function view($id)
     {
-        //
+        $buku = Buku::find($id);
+        return view('view', ['buku' => $buku]);
     }
 
     public function edit($id)
