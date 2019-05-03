@@ -11,9 +11,8 @@
                 <tr class="text-center">
                     <th scope="col">ID</th>
                     <th scope="col">JUDUL</th>
-                    <th scope="col">PENERBIT</th>
-                    <th scope="col">TAHUN TERBIT</th>
-                    <th scope="col">PENGARANG</th>
+                    <th scope="col">DIBUAT PADA</th>
+                    <th scope="col">DIPERBARUI PADA</th>
                     <th scope="col">AKSI</th>
                 </tr>
             </thead>
@@ -23,9 +22,8 @@
                         <tr class="table-light text-center">
                             <td>{{$b->id}}</td>
                             <td>{{$b->judul}}</td>
-                            <td>{{$b->penerbit}}</td>
-                            <td>{{$b->tahun_terbit}}</td>
-                            <td>{{$b->pengarang}}</td>
+                            <td>{{$b->created_at->format('D, d M Y')}}</td>
+                            <td>{{$b->updated_at->format('D, d M Y')}}</td>
                             <td>
                                 <div class="d-flex justify-content-center">
                                     <!-- <div class="col-2"> -->
